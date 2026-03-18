@@ -1,0 +1,26 @@
+#!/bin/bash
+
+# Check the build type
+if [ "$#" -ne 1 ];
+then
+  build_type=Release
+else
+  build_type=$1
+fi
+
+if [ "$build_type" != "Debug" ] && [ "$build_type" != "Release" ]
+then
+  echo Unknown build type ${build_type}
+  exit 1
+fi
+
+if [ "$CONDA_DEFAULT_ENV" != "" ]
+then
+    echo It appears you are running from within a conda environment:
+    echo    \$CONDA_DEFAULT_ENV=${CONDA_DEFAULT_ENV}
+    echo Please deactivate all environments.
+    exit 1
+fi
+
+./Scripts/Build_ThirdParty.sh ${build_type}
+./Scripts/Build_Source.sh ${build_type}

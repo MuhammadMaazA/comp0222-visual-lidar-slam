@@ -1,0 +1,10 @@
+{
+  "started_utc": "2026-03-11T15:39:51.294462+00:00",
+  "total_lidar_scans": 0,
+  "total_camera_frames": 0,
+  "duration_s": 0,
+  "lidar_port": "COM19",
+  "camera": "OpenCV Webcam",
+  "cell_size_mm": 25,
+  "map_dim": 600
+}
