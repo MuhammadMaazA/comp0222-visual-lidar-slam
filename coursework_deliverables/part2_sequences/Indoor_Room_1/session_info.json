@@ -1,0 +1,12 @@
+{
+  "started_utc": "2026-03-11T16:13:01.412009+00:00",
+  "controls": "SPACE start/pause both sensors, Q/ESC stop",
+  "camera": {
+    "width": 848,
+    "height": 480,
+    "fps": 30
+  },
+  "lidar": {
+    "port": "COM5"
+  }
+}
